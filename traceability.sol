@@ -60,7 +60,7 @@ contract traceability_project {
         peoples[peopleCount] = People(_id, _name);
     }
 
-    function addProduct (string _name, State def_state, Comment def_comment, string location) onlyOwner {
+    function addProduct (string _name, State def_state, Comment def_comment, string location) public onlyOwner {
         productsCount ++;
         products[productsCount] = Product(productsCount, _name, def_state, location, def_comment);
         // At creation of the product, this latter is considered untouched.
